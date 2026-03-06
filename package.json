@@ -1,0 +1,17 @@
+{
+  "name": "owasp-juice-shop-hw3-login-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Simple OWASP login form with safe mode and optional vulnerable SQLi demo mode.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "DEMO_VULN=true node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^7.1.0"
+  }
+}

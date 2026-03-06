@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport"
+ content="width=device-width, initial-scale=1" />
+ <title>Juice Shop - Login (HW3)</title>
+ <style>
+ * { box-sizing: border-box; }
+ body {
+ font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+ margin: 0;
+ min-height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background: linear-gradient(135deg, #ff7eb3, #ff4f9a);
+ }
+ .card {
+ background: #fff9fc;
+ width: min(420px, 92vw);
+ border-radius: 16px;
+ padding: 24px 22px;
+ box-shadow: 0 10px 30px rgba(136, 23, 76, .25);
+ }
+ h1 { margin: 0 0 14px 0; font-size: 20px; }
+ form { margin-top: 14px; }
+ label { display: block; margin-top: 12px; font-size: 13px; color: #333; }
+ input {
+ width: 100%;
+ padding: 10px 12px;
+ margin-top: 6px;
+ border: 1px solid #ccc;
+ border-radius: 10px;
+ font-size: 14px;
+ }
+ button {
+ width: 100%;
+ margin-top: 16px;
+ padding: 10px 12px;
+ border: 0;
+ border-radius: 10px;
+ font-size: 14px;
+ background: #e91e63;
+ color: #fff;
+ cursor: pointer;
+ }
+ button:hover { background: #d81b60; }
+ .msg { margin-top: 12px; font-size: 13px; }
+ .err { color: #b00020; }
+ .ok { color: #0b6b0b; }
+ </style>
+</head>
+<body>
+ <div class="card">
+ <h1>Login</h1>
+ <form id="loginForm" novalidate>
+ <label for="email">Email</label>
+ <input id="email" name="email" type="email"
+ autocomplete="username"
+ placeholder="user@example.com" required />
+ <label for="password">Password</label>
+ <input id="password" name="password" type="password"
+ autocomplete="current-password"
+ placeholder="min 8 chars" required />
+ <button type="submit">Sign in</button>
+ <div id="msg" class="msg" aria-live="polite"></div>
+ </form>
+ </div>
+ <script src="app.js"></script>
+</body>
+</html>
