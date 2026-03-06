@@ -30,7 +30,7 @@ Screenshot evidence to capture:
 - Optional: DevTools Network response from `/api/login-vuln` includes
   `"attack":{"success":true,"type":"SQLi",...}`.
 
-## Screenshot B - XSS attempt (payload + rendered result)
+## XSS attempt (payload + rendered result)
 1. Start server in demo mode:
    `DEMO_VULN=true npm start`
 2. Open:
@@ -44,7 +44,7 @@ Screenshot evidence to capture:
    the message area renders pink bold text `XSS rendered` (from payload),
    proving unsanitized HTML execution in the page.
 
-## Security notes (what I implemented)
+## Security notes 
 - Client-side: prevents empty fields, requires `@` in email, password >= 8.
 - Server-side: repeats validation (never trust the browser).
 - Safe DOM updates: uses `textContent` (not `innerHTML`) to prevent XSS.
